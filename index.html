@@ -84,7 +84,7 @@ function render(){
   items.forEach(x=>{
     const m=`Tháng ${+x.date.slice(5,7)}/${x.date.slice(0,4)}`;
     if(m!==last){out+=`<h2 class="mon">${m}</h2>`;last=m}
-    out+=`<article class="item"><div class="d">${hl(fd(x.date))}</div><div><p class="txt">${hl(x.txt)}</p><div class="meta"><span class="tag">${hl(x.cat)}</span><span>Hiệu lực: ${hl(effT(x.eff))}</span><span>Kênh gửi: ${hl(x.ch)}</span>${src(x)}</div></div></article>`;
+    out+=`<article class="item"><div class="d">${hl(fd(x.date))}</div><div><p class="txt">${hl(x.txt)}</p><div class="meta"><span class="tag">${hl(x.cat)}</span><span>Hiệu lực: ${hl(effT(x.eff))}</span><span>Email gửi: ${hl(x.ch)}</span>${src(x)}</div></div></article>`;
   });
   $('list').innerHTML=out;
 }
